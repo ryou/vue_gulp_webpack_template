@@ -1,0 +1,11 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: -5px;
+}
+.item {
+  flex-basis: 25%;
+  padding: 5px;
+  box-sizing: border-box;
+}

@@ -1,29 +1,29 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    bundle: './src/webpack/main.js'
+    bundle: './src/webpack/main.js',
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist/assets'),
-    publicPath: '/assets/'
+    publicPath: '/assets/',
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: 'images/[name].[ext]?[hash]'
-        }
-      }
-    ]
+          name: 'images/[name].[ext]?[hash]',
+        },
+      },
+    ],
   },
   // webpack-dev-serverのオプション
   // 詳細は以下
@@ -38,8 +38,8 @@ module.exports = {
 
     // webpackによりコンパイルされたファイルが配置されるディレクトリ
     // 「publicPath: '/assets/'」の場合「http://hoge.com/assets/bundle.js」みたいな感じで出力される
-    publicPath: '/assets/'
-  }
+    publicPath: '/assets/',
+  },
 };
 
 // 以下の記述はvue-cliで使用出来るtemplateを参考にした
@@ -48,6 +48,6 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.optimize.UglifyJsPlugin({
 
-    })
+    }),
   ]);
 }
