@@ -4,10 +4,11 @@
 }
 .thumb {
   transition: opacity .2s;
-}
-.thumb:hover {
-  opacity: .7;
-  cursor: pointer;
+
+  &:hover {
+    opacity: .7;
+    cursor: pointer;
+  }
 }
 .modal {
   position: fixed;
@@ -29,10 +30,11 @@
   justify-content: center;
 
   pointer-events: none;
-}
-.content img {
-  max-width: 90%;
-  max-height: 90%;
+
+  img {
+    max-width: 90%;
+    max-height: 90%;
+  }
 }
 
 .fade-enter-active, .fade-leave-active {

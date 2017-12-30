@@ -10,4 +10,4 @@
 </template>
 
 <script src="./script.js"></script>
-<style lang="css" src="./style.css"></style>
+<style lang="scss" src="./style.scss"></style>
